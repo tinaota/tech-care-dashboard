@@ -1,0 +1,117 @@
+.sidebar {
+    width: var(--sidebar-width);
+    background: var(--color-white);
+    height: calc(100vh - 32px);
+    margin: 16px 0 16px 16px;
+    border-radius: var(--border-radius);
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    overflow: hidden;
+}
+
+.logo {
+    margin-bottom: 32px;
+}
+
+.navSection {
+    flex: 1;
+    overflow-y: auto;
+}
+
+.navItem {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 16px;
+    margin-bottom: 4px;
+    border-radius: 40px;
+    /* Fully rounded pills */
+    cursor: pointer;
+    color: var(--color-text-main);
+    font-weight: 700;
+    font-size: 14px;
+    text-decoration: none;
+    transition: background 0.2s, color 0.2s;
+}
+
+.navItem:hover {
+    background: var(--color-bg-main);
+}
+
+.navItemActive {
+    background: var(--color-primary);
+    color: var(--color-text-main);
+}
+
+/* Patient List specific styles if sidebar includes patients list as per design */
+/* Wait, the design has Sidebar as "Patients List"? 
+   Let's re-check the screenshot.
+   Left Sidebar seems to be "Patients".
+   Top Navigation is the main "Menu" (Overview, Patients, Schedule etc).
+   There isn't a traditional "Left Sidebar for Menu". 
+   The Menu is likely the Top Header?
+   
+   Looking at dashboard_view_1767749743332.png:
+   Top Bar: Logo (Tech.Care) on left. Nav items (Overview, Patients, Schedule...) in center. User Profile on right.
+   
+   Left Panel: "Patients" list with Search.
+   Center: Diagnosis History etc.
+   Right Panel: Patient Details.
+   
+   Correction: The "Sidebar" in my plan was generic. 
+   I should rename this to "PatientsSidebar" or just implement it as the left column layout.
+   And "Topbar" is the main navigation.
+*/
+
+.sidebarTitle {
+    font-size: 18px;
+    font-weight: 800;
+    margin-bottom: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.patientList {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.patientItem {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.patientItemActive {
+    background: #D8FCF7;
+    /* Light Teal background for active patient */
+}
+
+.patientInfo {
+    display: flex;
+    flex-direction: column;
+}
+
+.patientName {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--color-text-main);
+}
+
+.patientMeta {
+    font-size: 12px;
+    color: #707070;
+}
+
+.avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+}

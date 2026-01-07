@@ -1,0 +1,75 @@
+.profileCard {
+    background: #FFFFFF;
+    border-radius: var(--border-radius);
+    padding: 32px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: calc(100vh - 32px - var(--header-height));
+    /* Approx fit */
+    /* If in a layout */
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 32px;
+}
+
+.avatar {
+    border-radius: 50%;
+    margin-bottom: 24px;
+}
+
+.name {
+    font-size: 24px;
+    font-weight: 800;
+    color: var(--color-text-main);
+}
+
+.infoList {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-bottom: 40px;
+}
+
+.infoItem {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.iconCircle {
+    width: 42px;
+    height: 42px;
+    background: #F6F7F8;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.label {
+    font-size: 14px;
+    color: var(--color-text-main);
+}
+
+.value {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--color-text-main);
+}
+
+.showInfoBtn {
+    background: var(--color-primary);
+    border: none;
+    border-radius: 40px;
+    padding: 12px 32px;
+    font-weight: 700;
+    font-size: 14px;
+    cursor: pointer;
+    margin-top: auto;
+}

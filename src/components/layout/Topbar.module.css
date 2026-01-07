@@ -1,0 +1,79 @@
+.topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--color-white);
+    height: var(--header-height);
+    padding: 0 32px;
+    border-radius: 70px;
+    margin: 18px;
+}
+
+.logo {
+    font-weight: 800;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.navLink {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 700;
+    font-size: 14px;
+    cursor: pointer;
+    color: var(--color-text-main);
+    padding: 10px 16px;
+    border-radius: 40px;
+    transition: all 0.2s;
+}
+
+.navLinkActive {
+    background: var(--color-primary);
+    color: var(--color-text-main);
+}
+
+.rightSection {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding-right: 12px;
+    border-right: 1px solid #EDEDED;
+}
+
+.profileAvatar {
+    border-radius: 50%;
+}
+
+.profileInfo {
+    display: flex;
+    flex-direction: column;
+}
+
+.profileName {
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.profileRole {
+    font-size: 12px;
+    color: #707070;
+}
+
+.settings {
+    display: flex;
+    gap: 12px;
+}
