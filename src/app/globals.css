@@ -1,27 +1,34 @@
 :root {
-  /* Primary Colors */
-  --color-primary: #01F0D0; /* Teal */
-  --color-secondary: #283342; /* Dark Blue/Navy for implementation */
-  --color-text-main: #072635; /* Navy */
-  --color-bg-main: #F6F7F8; /* Light Gray Background */
+  /* Colors */
+  --color-primary: #01F0D0;
+  /* Teal */
+  --color-secondary: #072635;
+  /* Dark Navy */
+  --color-bg-main: #F6F7F8;
+  /* Light Gray Background */
   --color-white: #FFFFFF;
 
-  /* Accent Colors */
-  --color-accent-purple: #705AAA;
-  --color-accent-pink: #E66FD2;
-  --color-accent-red: #C26EB4; 
-  --color-danger: #F45C72; /* Estimated red for high risk */
-  
-  /* Layout */
-  --sidebar-width: 250px;
+  /* Sidebar/Navigation */
+  --color-nav-hover: #D8FCF7;
+  /* Light Teal for active state */
+
+  /* Text */
+  --color-text-main: #072635;
+  --color-text-secondary: #707070;
+
+  /* Status/Vitals */
+  --color-respiratory: #E0F3FA;
+  --color-temperature: #FFE6E9;
+  --color-heart: #FFE6F1;
+
+  /* Dimensions */
+  --sidebar-width: 320px;
+  /* Reduced slightly from 367px to fit standard 1440 screens better with gap */
   --header-height: 72px;
-  --border-radius: 16px;
-  
+
   /* Spacing */
-  --spacing-sm: 8px;
-  --spacing-md: 16px;
-  --spacing-lg: 24px;
-  --spacing-xl: 32px;
+  --spacing-base: 18px;
+  /* Based on user current padding */
 }
 
 * {
@@ -50,9 +57,11 @@ ul {
 ::-webkit-scrollbar {
   width: 6px;
 }
+
 ::-webkit-scrollbar-track {
   background: transparent;
 }
+
 ::-webkit-scrollbar-thumb {
   background: #E3E4E6;
   border-radius: 3px;

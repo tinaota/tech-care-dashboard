@@ -1,3 +1,4 @@
+import styles from './page.module.css';
 import Topbar from '@/components/layout/Topbar';
 import PatientsSidebar from '@/components/layout/PatientsSidebar';
 import DiagnosisHistory from '@/components/dashboard/DiagnosisHistory';
@@ -11,17 +12,15 @@ export default async function Home() {
   const selectedPatient = patients.find(p => p.name === 'Jessica Taylor') || patients[0];
 
   return (
-    <main style={{ minHeight: '100vh', background: '#F6F7F8' }}>
+    <main className={styles.page}>
       <Topbar />
 
-      <div style={{ display: 'flex', gap: '32px', padding: '0 18px 18px 18px', height: 'calc(100vh - 120px)' }}>
-        {/* Left Sidebar */}
-        <div style={{ flexShrink: 0 }}>
+      <div className={styles.contentWrapper}>
+        <div className={styles.leftSidebar}>
           <PatientsSidebar patients={patients} activePatientName={selectedPatient?.name} />
         </div>
 
-        {/* Main Content */}
-        <div style={{ flex: 1, display: 'flex', flexDirection: 'column', gap: '32px', overflowY: 'auto', paddingBottom: '20px' }}>
+        <div className={styles.mainColumn}>
           {selectedPatient && (
             <>
               <DiagnosisHistory history={selectedPatient.diagnosis_history} />
@@ -31,8 +30,7 @@ export default async function Home() {
           )}
         </div>
 
-        {/* Right Sidebar */}
-        <div style={{ width: '360px', flexShrink: 0 }}>
+        <div className={styles.rightSidebar}>
           {selectedPatient && <PatientProfile patient={selectedPatient} />}
         </div>
       </div>

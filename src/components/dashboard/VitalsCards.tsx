@@ -42,7 +42,7 @@ export default function VitalsCards({ latestVitals }: VitalsCardsProps) {
                 </div>
                 <span className={styles.vitalLabel}>Heart Rate</span>
                 <span className={styles.vitalValue}>{heart_rate.value} bpm</span>
-                <span className={styles.vitalStatus} style={{ color: heart_rate.levels !== 'Normal' ? '#F45C72' : '' }}>
+                <span className={clsx(styles.vitalStatus, heart_rate.levels !== 'Normal' && styles.statusWarning)}>
                     {heart_rate.levels}
                 </span>
             </div>

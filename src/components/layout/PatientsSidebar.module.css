@@ -35,6 +35,11 @@
     transition: background 0.2s, color 0.2s;
 }
 
+.navIcon {
+    margin-left: auto;
+    opacity: 0.5;
+}
+
 .navItem:hover {
     background: var(--color-bg-main);
 }
@@ -89,7 +94,7 @@
 }
 
 .patientItemActive {
-    background: #D8FCF7;
+    background: var(--color-nav-hover);
     /* Light Teal background for active patient */
 }
 

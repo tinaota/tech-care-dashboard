@@ -25,18 +25,19 @@ export default function DiagnosisHistory({ history }: DiagnosisHistoryProps) {
     const latest = history[0]; // Latest entry
 
     return (
-        <div className={styles.chartContainer} style={{ background: '#FFFFFF', padding: '20px', borderRadius: '16px' }}>
-            <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '20px' }}>
+
+        <div className={styles.chartContainer}>
+            <div className={styles.chartHeader}>
                 <h3 className={styles.tableTitle}>Diagnosis History</h3>
             </div>
 
-            <div style={{ display: 'flex', gap: '20px' }}>
-                <div style={{ flex: 1, background: '#F4F0FE', borderRadius: '12px', padding: '10px' }}>
+            <div className={styles.chartContent}>
+                <div className={styles.chartWrapper}>
                     <ResponsiveContainer width="100%" height={250}>
                         <LineChart data={chartData}>
-                            <CartesianGrid vertical={false} stroke="#E3E4E6" />
-                            <XAxis dataKey="month" tick={{ fontSize: 12 }} axisLine={false} tickLine={false} />
-                            <YAxis domain={[60, 180]} tick={{ fontSize: 12 }} axisLine={false} tickLine={false} />
+                            <CartesianGrid vertical={false} stroke="#CBC8D4" />
+                            <XAxis dataKey="month" tick={{ fontSize: 12, fill: '#707070' }} axisLine={false} tickLine={false} />
+                            <YAxis domain={[60, 180]} tick={{ fontSize: 12, fill: '#707070' }} axisLine={false} tickLine={false} />
                             <Tooltip />
                             <Line
                                 type="monotone"
@@ -59,23 +60,25 @@ export default function DiagnosisHistory({ history }: DiagnosisHistoryProps) {
                 </div>
 
                 {/* Legend / Stats Panel */}
-                <div style={{ width: '200px', display: 'flex', flexDirection: 'column', gap: '20px' }}>
-                    <div>
-                        <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '8px' }}>
-                            <div style={{ width: '14px', height: '14px', borderRadius: '50%', background: '#C26EB4' }}></div>
-                            <span style={{ fontWeight: 700 }}>Systolic</span>
+                <div className={styles.chartLegend}>
+                    <div className={styles.legendItem}>
+                        <div className={styles.legendTitle}>
+                            <div className={styles.legendDot} style={{ background: '#E66FD2' }}></div>
+                            <span>Systolic</span>
                         </div>
-                        <div style={{ fontSize: '22px', fontWeight: 800 }}>{latest?.blood_pressure.systolic.value}</div>
-                        <div style={{ fontSize: '14px' }}>{latest?.blood_pressure.systolic.levels}</div>
+                        <div className={styles.legendValue} style={{ borderBottom: 'none' }}>{latest?.blood_pressure.systolic.value}</div>
+                        <div className={styles.legendLevel}>{latest?.blood_pressure.systolic.levels}</div>
                     </div>
-                    <hr />
-                    <div>
-                        <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '8px' }}>
-                            <div style={{ width: '14px', height: '14px', borderRadius: '50%', background: '#7E6CAB' }}></div>
-                            <span style={{ fontWeight: 700 }}>Diastolic</span>
+
+                    <hr className={styles.divider} />
+
+                    <div className={styles.legendItem}>
+                        <div className={styles.legendTitle}>
+                            <div className={styles.legendDot} style={{ background: '#8C6FE6' }}></div>
+                            <span>Diastolic</span>
                         </div>
-                        <div style={{ fontSize: '22px', fontWeight: 800 }}>{latest?.blood_pressure.diastolic.value}</div>
-                        <div style={{ fontSize: '14px' }}>{latest?.blood_pressure.diastolic.levels}</div>
+                        <div className={styles.legendValue} style={{ borderBottom: 'none' }}>{latest?.blood_pressure.diastolic.value}</div>
+                        <div className={styles.legendLevel}>{latest?.blood_pressure.diastolic.levels}</div>
                     </div>
                 </div>
             </div>

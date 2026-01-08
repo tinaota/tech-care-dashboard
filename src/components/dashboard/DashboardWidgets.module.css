@@ -52,6 +52,10 @@
     margin-top: auto;
 }
 
+.statusWarning {
+    color: #F45C72;
+}
+
 /* Specific background colors for vitals */
 .bgBlue {
     background: #E0F3FA;
@@ -65,7 +69,86 @@
     background: #FFE6E9;
 }
 
-/* Corrected per visual */
+/* Diagnosis Chart */
+.chartContainer {
+    background: var(--color-white);
+    border-radius: var(--border-radius);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.chartHeader {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.chartContent {
+    display: flex;
+    gap: 20px;
+}
+
+.chartWrapper {
+    flex: 1;
+    background: #F4F0FE;
+    border-radius: 12px;
+    padding: 10px;
+    min-height: 250px;
+}
+
+.chartLegend {
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.legendItem {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.legendTitle {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--color-text-main);
+}
+
+.legendDot {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+}
+
+.legendValue {
+    font-size: 22px;
+    font-weight: 800;
+    color: var(--color-text-main);
+    padding-bottom: 8px;
+    border-bottom: 1px solid #CBC8D4;
+    /* Line below value */
+    margin-bottom: 8px;
+    /* Actually design has line between groups.. let's use HR or border */
+}
+
+/* Override HR or border logic based on design:
+   The design seems to have a divider between Systolic and Diastolic blocks.
+*/
+.divider {
+    border: none;
+    border-top: 1px solid #CBC8D4;
+    margin: 0;
+}
+
+.legendLevel {
+    font-size: 14px;
+    color: var(--color-text-main);
+}
 
 /* Diagnosis List */
 .diagnosisList {

@@ -70,5 +70,5 @@ export default function PatientProfile({ patient }: PatientProfileProps) {
 }
 
 function BooleanIcon({ gender }: { gender: string }) {
-    return <span style={{ fontWeight: 'bold' }}>{gender === 'Female' ? '♀' : '♂'}</span>;
+    return <span>{gender === 'Female' ? '♀' : '♂'}</span>;
 }

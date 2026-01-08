@@ -37,7 +37,7 @@ export default function PatientsSidebar({ patients, activePatientName = 'Jessica
                                 <span className={styles.patientName}>{patient.name}</span>
                                 <span className={styles.patientMeta}>{patient.gender}, {patient.age}</span>
                             </div>
-                            <MoreHorizontal size={20} style={{ marginLeft: 'auto', opacity: 0.5 }} />
+                            <MoreHorizontal size={20} className={styles.navIcon} />
                         </div>
                     ))}
                 </div>
