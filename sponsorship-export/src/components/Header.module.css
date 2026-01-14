@@ -1,0 +1,72 @@
+.header {
+    background-color: var(--color-white);
+    height: var(--header-height);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--color-sponsor-primary);
+    text-transform: uppercase;
+    letter-spacing: -1px;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.link {
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: var(--color-text-main);
+    transition: color 0.2s;
+}
+
+.link:hover {
+    color: var(--color-sponsor-primary);
+}
+
+.actions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.donateBtn {
+    background-color: #D32F2F;
+    /* Red/Pink for higher urgency/visibility per feedback */
+    color: white;
+    padding: 12px 28px;
+    /* Larger touch target */
+    border-radius: 30px;
+    font-weight: 700;
+    font-size: 1rem;
+    transition: background-color 0.2s, transform 0.1s;
+    box-shadow: 0 4px 6px rgba(211, 47, 47, 0.2);
+}
+
+.donateBtn:hover {
+    background-color: #B71C1C;
+    transform: translateY(-2px);
+}
+
+.userIcon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #F0F0F0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
