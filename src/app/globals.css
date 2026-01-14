@@ -27,15 +27,17 @@
   --header-height: 72px;
 
   /* Sponsorship Theme */
-  --color-sponsor-bg: #F8F9FD;
-  --color-sponsor-primary: #5A4FCF;
-  /* Purple */
-  --color-sponsor-accent: #FF6B6B;
-  /* Pink/Red for tags */
+  --color-sponsor-bg: #FFFFFF;
+  --color-sponsor-primary: #F36F21;
+  /* World Vision Orange */
+  --color-sponsor-secondary: #000000;
+  --color-sponsor-accent: #0072CE;
+  /* Blue accent */
+  /* Replaces Pink/Red */
   --color-sponsor-text-dark: #1A1A1A;
-  --color-sponsor-text-light: #666666;
-  --color-sponsor-card-bg: #F4F6FC;
-  /* Light Blue-ish Gray for cards */
+  --color-sponsor-text-light: #555555;
+  --color-sponsor-card-bg: #FFFFFF;
+  --color-sponsor-border: #E8E8E8;
 
   /* Spacing */
   --spacing-base: 18px;
